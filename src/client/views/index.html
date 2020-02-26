@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel App</title>
+</head>
+<body>
+    <header class="head">
+        <h1>Traveler<h1>
+    </header>
+    <div class= "container">
+        <h3>Your Trips:</h3>
+        <button class="add-trip" id="myBtn">+ Add a Trip</button>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+<!-------------------------------------------------------------------------------------------------------------------->
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Add a trip</h2>
+            </div>
+            <div class="modal-body">
+              <form class="" onsubmit="return Client.handleSubmit(event)"></form>
+              <table>
+                <tr>
+                  <td>Trip Name</td>
+                  <td><input type="text" id="tripName" value="Hi" placeholder="my trip"></td>
+                </tr>
+                <tr>
+                  <td>Location</td>
+                  <td><input type="text" id="tripLocation" value="Swiss" placeholder="Paris, France"></td>
+                </tr>
+                <tr>
+                  <td>Country Code</td>
+                  <td><input type="text" id="countryCode" value="CH" placeholder="CH"></td>
+                </tr>
+                <tr>
+                  <td>Postal Code</td>
+                  <td><input type="text" id="postalCode" value="" placeholder="6600"></td>
+                </tr>
+                <tr>
+                  <td>Departing</td>
+                  <td><input type="date" id="tripDepart" value=""></td>
+                </tr>
+              </table>
+                <input type="submit" id="createTrip" name="" value="Submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+              </form>
+            </div>
+            <div class="modal-footer">
+              <h3></h3>
+            </div>
+          </div>
+        </div>
+<!-------------------------------------------------------------------------------------------------------------------->        
+    </div>
+    <div id="trips">
+      Empty
+        <!-- Here we will create our trips cards-->
+    </div>
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+              navigator.serviceWorker.register('/service-worker.js');
+          });
+      }
+    </script>
+</body>
+</html>

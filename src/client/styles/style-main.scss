@@ -1,0 +1,39 @@
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(#142850,#27496d,#0c7b93,#00a8cc,white);
+    padding: 5px;
+    h3{
+     color:white;  
+    }
+    button {
+        float: right;
+        box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+        background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+        background-color:#79bbff;
+        border-radius:33px;
+        border:1px solid #84bbf3;
+        display:block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 18px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #528ecc;
+    }
+    button:hover {
+        background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+        background-color:#378de5;
+    }
+    button:active {
+        position:relative;
+        top:1px;
+    }
+}

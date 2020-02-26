@@ -1,0 +1,95 @@
+#trips{
+    margin-top: 10px;
+    padding: 3px;
+    border: 2px blue solid;
+    border-radius: 5px;
+    text-align: center;
+    opacity:0.6;
+}
+.card{
+    border:1px solid black;
+    display: grid;
+    grid-template-areas:
+    'photo photo photo info info info'
+    'menu main main main right right'
+    'weather weather weather weather weather weather'
+    'close close close close close close';
+    grid-template-columns: repeat(100px,6);
+    grid-gap: 5px;
+    .deleteCard{
+        grid-area: close;
+        box-shadow:inset 0px 34px 0px -15px #b54b3a;
+        background-color:#a73f2d;
+        border-radius:23px;
+        border:1px solid #241d13;
+        display:inline;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:12px;
+        font-weight:bold;
+        padding:5px 10px; 
+        width: 20%;
+        margin: 5px auto;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #7a2a1d;
+    }
+    .deleteCard:hover{
+        background-color:#b34332;
+        cursor: pointer;
+    }
+    .deleteCard:active {
+        position:relative;
+        top:1px;
+    }
+    .image {
+        grid-area: photo;
+        height:200px;
+        margin: 0;
+       // background-size:cover;
+       // background-repeat: no-repeat; 
+        border:2px red solid;
+        .photo{
+            width: 100%;
+            height: 100%;            
+        }
+
+    }
+    .tripCard{
+        grid-area: info;
+        float:right;
+        border: 2px solid orchid;
+        border-radius: 5px;
+        padding: 3px;
+        span{
+            font-weight: lighter;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    }
+    .weather{
+        grid-area: weather;
+        border:1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        div{
+            text-align: center;
+            margin: 5px;
+            padding: 5px;
+        }
+        .weatherDay{
+            
+            border:1px solid rgba(0,0,0,0.2);
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+        }
+        .today{
+            border:1px solid rgba(255, 3, 3, 0.7);
+            box-shadow: 0 2px 0px 0 rgba(0,0,0,0.2);
+            span{
+                color: red;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+
